@@ -1,0 +1,143 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B31AC013-E3D3-4696-9985-DC7D4104A4E9}</ProjectGuid>
+    <ProjectTypeGuids>{FEACFBD2-3405-455C-9665-78FE426C6842};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <RootNamespace>UltimateXF.iOS</RootNamespace>
+    <AssemblyName>UltimateXF.iOS</AssemblyName>
+    <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <MtouchDebug>true</MtouchDebug>
+    <MtouchNoSymbolStrip>true</MtouchNoSymbolStrip>
+    <MtouchFastDev>true</MtouchFastDev>
+    <IOSDebuggerPort>41316</IOSDebuggerPort>
+    <DeviceSpecificBuild>false</DeviceSpecificBuild>
+    <MtouchVerbosity>
+    </MtouchVerbosity>
+    <MtouchLink>
+    </MtouchLink>
+    <MtouchHttpClientHandler>
+    </MtouchHttpClientHandler>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <DefineConstants>
+    </DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <MtouchNoSymbolStrip>true</MtouchNoSymbolStrip>
+    <MtouchVerbosity>
+    </MtouchVerbosity>
+    <MtouchHttpClientHandler>
+    </MtouchHttpClientHandler>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="Xamarin.iOS" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UltimateXFSettup.cs" />
+    <Compile Include="Renderers\Extendeds\SupportChartExtendedRenderer.cs" />
+    <Compile Include="Renderers\Extendeds\SupportBarLineChartBaseExtendedRenderer.cs" />
+    <Compile Include="Renderers\Extendeds\SupportLineChartExtendedRenderer.cs" />
+    <Compile Include="Renderers\Extendeds\AxisSetupExtensions.cs" />
+    <Compile Include="Renderers\Extendeds\SupportBarChartExtendedRenderer.cs" />
+    <Compile Include="Renderers\Extendeds\SupportPieRadarChartBaseExtendedRenderer.cs" />
+    <Compile Include="Renderers\Extendeds\SupportPieChartExtendedRenderer.cs" />
+    <Compile Include="Renderers\Extendeds\SupportRadarChartExtendedRenderer.cs" />
+    <Compile Include="Renderers\Extendeds\SupportBubbleChartExtendedRenderer.cs" />
+    <Compile Include="Renderers\Extendeds\SupportCandleStickChartExtendedRenderer.cs" />
+    <Compile Include="Renderers\Extendeds\SupportScatterChartExtendedRenderer.cs" />
+    <Compile Include="Renderers\Extendeds\SupportHorizontalBarChartExtendedRenderer.cs" />
+    <Compile Include="Renderers\Extendeds\SupportCombinedChartExtendedRenderer.cs" />
+    <Compile Include="Renderers\Exporters\ExtendedChartExport.cs" />
+    <Compile Include="Renderers\Exporters\AxisValueFormatterExport.cs" />
+    <Compile Include="Renderers\Exporters\DataSetValueFormatterExport.cs" />
+    <Compile Include="iFontExtend.cs" />
+    <Compile Include="NSObjectWrapper.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\UltimateXF\UltimateXF.csproj">
+      <Project>{BCF3934C-3F39-4A6D-9ED6-8F50B628DF2E}</Project>
+      <Name>UltimateXF</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="iOSCharts">
+      <Version>3.2.2.1</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.Swift4">
+      <Version>4.0.0.2</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.Swift4.Core">
+      <Version>4.2.1.1</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.Swift4.CoreAudio">
+      <Version>4.2.1.1</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.Swift4.CoreData">
+      <Version>4.2.1.1</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.Swift4.CoreFoundation">
+      <Version>4.2.1.1</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.Swift4.CoreGraphics">
+      <Version>4.2.1.1</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.Swift4.CoreImage">
+      <Version>4.2.1.1</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.Swift4.CoreMedia">
+      <Version>4.2.1.1</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.Swift4.Darwin">
+      <Version>4.2.1.1</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.Swift4.Dispatch">
+      <Version>4.2.1.1</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.Swift4.Foundation">
+      <Version>4.2.1.1</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.Swift4.Metal">
+      <Version>4.2.1.1</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.Swift4.ObjectiveC">
+      <Version>4.2.1.1</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.Swift4.OS">
+      <Version>4.2.1.1</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.Swift4.QuartzCore">
+      <Version>4.2.1.1</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.Swift4.UIKit">
+      <Version>4.2.1.1</Version>
+    </PackageReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
+  <Import Project="..\packages\Xamarin.Swift4.4.0.0.0\build\Xamarin.Swift4.targets" Condition="Exists('..\packages\Xamarin.Swift4.4.0.0.0\build\Xamarin.Swift4.targets')" />
+</Project>

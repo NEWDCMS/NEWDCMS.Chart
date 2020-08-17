@@ -1,0 +1,33 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Xamarin.Forms" Version="4.5.0.356" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="Class1.cs" />
+    <Compile Remove="Widget\SupportEntry.cs" />
+    <Compile Remove="Widget\Charts\Archive\SupportBarChart.cs" />
+    <Compile Remove="Widget\Charts\Archive\SupportBubbleChart.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Widget\" />
+    <Folder Include="Widget\Charts\" />
+    <Folder Include="Widget\Charts\Models\" />
+    <Folder Include="Widget\Charts\Models\LineChart\" />
+    <Folder Include="Widget\Charts\Models\BarChart\" />
+    <Folder Include="Widget\Charts\Models\Formatters\" />
+    <Folder Include="Widget\Charts\Models\PieChart\" />
+    <Folder Include="Widget\Charts\Models\CandleStickChart\" />
+    <Folder Include="Widget\Charts\Models\BubbleChart\" />
+    <Folder Include="Widget\Charts\Models\RadarChart\" />
+    <Folder Include="Widget\Charts\Models\ScatterChart\" />
+    <Folder Include="Widget\Charts\Models\CombinedChart\" />
+    <Folder Include="Widget\Charts\Models\Component\" />
+    <Folder Include="Widget\Charts\Models\ComponentXF\" />
+    <Folder Include="Widget\Charts\Models\Legend\" />
+  </ItemGroup>
+</Project>
